@@ -1,8 +1,8 @@
 # Ultrasound Imaging Platform Technical Solution Details – Full‑Chain Implementation from FPGA to WiFi Hotspot
 
-> Author: VisSonixAP
+> 
 
-In the field of portable ultrasound diagnostic device development, the ability to build a complete hardware‑to‑software ecosystem in‑house is key to product performance and reliability. This article takes a Zynq SoC‑based portable ultrasound system as an example to thoroughly analyse the entire technical chain – from FPGA logic design, high‑voltage driving, ADC sampling, data transfer, embedded system porting, to WiFi hotspot setup.
+This article takes a Zynq SoC‑based portable ultrasound system as an example to thoroughly analyse the entire technical chain – from FPGA logic design, high‑voltage driving, ADC sampling, data transfer, embedded system porting, to WiFi hotspot setup.
 
 ![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/11.JPG)
 
