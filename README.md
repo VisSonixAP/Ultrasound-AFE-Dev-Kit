@@ -192,3 +192,4 @@ Running software
 From FPGA logic to embedded Linux, from high‑voltage driving to a WiFi hotspot, this solution fully covers the core technology stack for portable ultrasound device development. For more technical details or to obtain a development kit, please feel free to contact us via the official public account.
 
 Support: VisSonixAP@163.com
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/20260726113755_667_57.jpg)
