@@ -4,10 +4,14 @@
 
 In the field of portable ultrasound diagnostic device development, the ability to build a complete hardware‑to‑software ecosystem in‑house is key to product performance and reliability. This article takes a Zynq SoC‑based portable ultrasound system as an example to thoroughly analyse the entire technical chain – from FPGA logic design, high‑voltage driving, ADC sampling, data transfer, embedded system porting, to WiFi hotspot setup.
 
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/11.JPG)
+
 ## 1. FPGA Logic and High‑Voltage Driving
 
 The quality of ultrasound imaging first depends on the performance of the analogue front‑end chain. This solution uses an FPGA as the central controller, responsible for transmit waveform generation, receive signal processing, and timing control. The high‑voltage driver section is especially critical – by optimising the high‑voltage circuit design, the system achieves multiple adjustable output levels from 20 V to 49 V. Measured data show good linearity and stability, providing flexible voltage support for ultrasound detection at different depths.
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Snap10.JPG)
 
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Snap11.JPG)
 ## 2. Transmit and Receive Chain
 
 The transmit chain is built around the 5584 device; the drive current is precisely set via TRSW configuration to ensure controllable and consistent transmit energy. Frequency tests verified reliable response under complex operating conditions.
