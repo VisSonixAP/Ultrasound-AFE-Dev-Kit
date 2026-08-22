@@ -4,38 +4,38 @@
 
 This article takes a Zynq SoC‑based portable ultrasound system as an example to thoroughly analyse the entire technical chain – from FPGA logic design, high‑voltage driving, ADC sampling, data transfer, embedded system porting, to WiFi hotspot setup.
 
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/11.JPG)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/11.JPG)
 
 ## 1. FPGA Logic and High‑Voltage Driving
 
 The quality of ultrasound imaging first depends on the performance of the analogue front‑end chain. This solution uses an FPGA as the central controller, responsible for transmit waveform generation, receive signal processing, and timing control. The high‑voltage driver section is especially critical – by optimising the high‑voltage circuit design, the system achieves multiple adjustable output levels from 20 V to 49 V. Measured data show good linearity and stability, providing flexible voltage support for ultrasound detection at different depths.
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Snap10.jpg) 
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/Snap10.jpg) 
 
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Snap11.jpg)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/Snap11.jpg)
 ## 2. Transmit and Receive Chain
 
 The transmit chain is built around the 5584 device; the drive current is precisely set via TRSW configuration to ensure controllable and consistent transmit energy. Frequency tests verified reliable response under complex operating conditions.
 
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/5584.png)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/5584.png)
 
 > According to the TRSW configuration, set the drive current; the transmit frequency was tested at 7.5 MHz.
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/DS1Z_QuickPrint1.png)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/DS1Z_QuickPrint1.png)
 
 ## 3. ADC Sampling and Spectrum Analysis
 
 ADC sampling is the bridge between the analogue front‑end and digital signal processing. This solution completed a full ADC debug workflow. After correctly receiving the serial data, CSV data were exported using Vivado ILA and analysed in MATLAB for spectrum analysis. The spectrum results directly reflect signal quality and provide a basis for optimising subsequent digital signal processing algorithms.
 
 > **AD9278 Test Mode**: After correct serial reception, the data are as follows:
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ILA.png)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/ILA.png)
 > ```
 > write_hw_ila_data -csv_file C:/Data/design1_ila_data[current_hw_ila_data]
 > ```
 > **MATLAB Spectrum**
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/matlabrf.png)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/matlabrf.png)
 ## 4. PL‑PS Co‑design and DMA Transfer
 
 The system fully leverages the strengths of the Zynq platform – FPGA (PL) and ARM (PS) – by using the Xillybus DMA engine for efficient register configuration and bulk data transfer. The DMA mechanism effectively reduces CPU load, enabling seamless large‑data‑flow movement between PL and PS, which provides ample bandwidth for real‑time imaging.
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Snap12.jpg)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/Snap12.jpg)
 
 ## 5. Deep Customisation of the Embedded System
 
@@ -165,12 +165,12 @@ echo "Linux Application"
 
 WiFi Driver Porting and Hotspot Optimisation
 The QCA9377 wireless driver was successfully ported, enabling the device to act as a SoftAP providing a WiFi hotspot. To address the issue where some clients required multiple password entries, the random number generation was improved by symlinking /dev/random to /dev/urandom, which effectively enhanced the connection experience.
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Snap12.jpg)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/Snap12.jpg)
 ## 6. Firmware Flashing and Final Results
 The system supports firmware flashing and updates via JTAG and other methods, providing a clear and efficient development workflow. The final running results validated the feasibility and stability of the entire chain solution.
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Snap14.jpg)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/Snap14.jpg)
 
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Snap15.jpg)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/Snap15.jpg)
 ## Supporting Materials
 The above test and verification steps require the following key resources:
 
@@ -192,4 +192,4 @@ Running software
 From FPGA logic to embedded Linux, from high‑voltage driving to a WiFi hotspot, this solution fully covers the core technology stack for portable ultrasound device development. For more technical details or to obtain a development kit, please feel free to contact us via the official public account.
 
 Support: VisSonixAP@163.com
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/20260726113755_667_57.jpg)
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/Pic/20260726113755_667_57.jpg)
