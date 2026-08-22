@@ -1,4 +1,21 @@
-# Ultrasound Imaging Platform Technical Solution Details – Full‑Chain Implementation from FPGA to WiFi Hotspot
+# Ultrasound Imaging Platform Technical Solution Details – Full‑Chain Implementation from FPGA to WiFi Hotspot(Update : 2026/08/22)
+
+> 
+
+
+B-mode ultrasound image, convex array as follows: B-mode ultrasound image:
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/conv_img.jpg)
+
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/conv_img2.jpg)
+
+B-mode ultrasound image, linear array as follows:
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/line_img.jpg)
+
+![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/line_img2.jpg)
+> 
+
+
+# Ultrasound Imaging Platform Technical Solution Details – Full‑Chain Implementation from FPGA to WiFi Hotspot(Update : 2026/07/28)
 
 > 
 
