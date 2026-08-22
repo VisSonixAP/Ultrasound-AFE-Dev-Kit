@@ -1,17 +1,42 @@
-# Ultrasound Imaging Platform Technical Solution Details – Full‑Chain Implementation from FPGA to WiFi Hotspot(Update : 2026/08/22)
+# Update of the ultrasound imaging system based on Zynq 7020 (Update: 2026/08/22)
 
-> 
+## B‑mode ultrasound images
 
+**Convex array:**
 
-B-mode ultrasound image, convex array as follows: B-mode ultrasound image:
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/conv_img.jpg)
+<img src="https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/conv_img.jpg" alt="conv_img" width="400">
 
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/conv_img2.jpg)
+<img src="https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/conv_img2.jpg" alt="conv_img2" width="400">
 
-B-mode ultrasound image, linear array as follows:
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/line_img.jpg)
+**Linear array:**
 
-![11](https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/line_img2.jpg)
+<img src="https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/line_img.jpg" alt="line_img" width="400">
+
+<img src="https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/line_img2.jpg" alt="line_img2" width="400">
+
+---
+
+## 1. Firmware files
+- `BOOT.bin` – programming file for Zynq 7020
+
+## 2. Hardware – hardware documentation
+- `io.xdc` – the Zynq 7020 project I/O constraints file
+
+## 3. Pic – picture data
+*(Placeholder for additional picture data if any)*
+
+## 4. Software
+- `android-build-debugCon.apk` – convex‑array software version
+- `android-build-debugLine.apk` – linear‑array software version
+
+## 5. ultrasound_img – ultrasound images
+(These are the image files displayed in the **B‑mode ultrasound images** section above.)
+
+## 6. Firmware upgrade process
+```cmd
+cmd /C program_flash -f ~\BOOT.bin -offset 0 -flash_type qspi-x4-single -fsbl ~\FSBL_DL_Ver.elf -cable type xilinx_tcf url TCP:127.0.0.1:3121
+```
+
 > 
 
 
