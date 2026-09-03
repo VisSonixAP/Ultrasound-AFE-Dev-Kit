@@ -1,5 +1,19 @@
 
+
 # Program bin file (Update: 2026/09/03)
+
+## The Hardware images
+
+**Top:**
+Hardware PCB top layer is as shown in the figure; 
+<img src="https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/TopPIC.png" alt="top" width="400">
+ 
+
+**Bottom:**
+Hardware PCB bottom layer is as shown in the figure.
+<img src="https://github.com/VisSonixAP/Ultrasound-AFE-Dev-Kit/blob/main/ultrasound_img/BottomPIC.png" alt="bottom" width="400">
+
+## program cmd 
 
 ```
 D:\Xilinx\SDK\2018.3\bin>cmd /C program_flash -f ~\BOOT.bin -offset 0 -flash_type qspi-x4-single -fsbl ~\FSBL_DL_Ver.elf -cable type xilinx_tcf url TCP:127.0.0.1:3121
